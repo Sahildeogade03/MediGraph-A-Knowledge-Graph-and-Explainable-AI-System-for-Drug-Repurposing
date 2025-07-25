@@ -5,10 +5,13 @@ requests==2.32.3
 rdkit-pypi==2022.09.5
 neo4j==5.28.1
 networkx==3.3
+--find-links https://data.pyg.org/whl/torch-2.4.0+cu121.html  # Critical for PyG
 torch==2.4.0
+torch-scatter==2.1.2+pt24cu121
+torch-sparse==0.6.18+pt24cu121
+torch-cluster==1.6.3+pt24cu121
+torch-spline-conv==1.2.2+pt24cu121
 torch_geometric==2.6.1
-torch-scatter==2.1.2  # Required for torch_geometric
-torch-sparse==0.6.18  # Required for torch_geometric
 plotly==5.15.0
 streamlit_agraph==0.0.45
 Pillow==10.4.0
@@ -23,6 +26,4 @@ faiss-cpu==1.10.0
 huggingface_hub==0.33.1
 transformers==4.46.3
 pickle-mixin==1.0.2
-pyg_lib==0.3.0  # Required for newer torch_geometric
-typing_extensions==4.12.0  # Required for torch 2.4+
-tqdm==4.66.4  # Required by many ML packages
+typing_extensions==4.12.0
